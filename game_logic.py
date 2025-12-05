@@ -10,7 +10,8 @@ def get_random_word():
 
 
 def display_game_state(mistakes, secret_word, guessed_letters):
-    """Displays the game state."""
+    """Displays the game state using the ascii art and the hidden secret word
+    with guessed letters and underscores."""
     print(STAGES[mistakes])
     # Build a display version of the secret word.
     display_word = ""
@@ -26,7 +27,7 @@ def display_game_state(mistakes, secret_word, guessed_letters):
 def get_valid_guess(guessed_letters):
     """Checks if the user input is a single letter and
     if the guessed letter is already in the list of guessed letters.
-    Keeps prompting the user to enter a single letter until a valid guess was entered
+    Keeps prompting the user to enter a single letter until a valid guess was entered.
     """
     while True:
         guess = input("Guess a letter: ").lower()
@@ -39,6 +40,9 @@ def get_valid_guess(guessed_letters):
 
 
 def play_game():
+    '''
+    Main game logic. Handles the user guesses and loops until the game ends.
+    '''
     secret_word = get_random_word()
     guessed_letters = []
     mistakes = 0

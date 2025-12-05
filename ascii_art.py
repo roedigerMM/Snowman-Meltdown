@@ -1,3 +1,4 @@
+#Length of Stages defines number of bad guesses until game is lost.
 STAGES = [
      # Stage 0: Full snowman
      """
